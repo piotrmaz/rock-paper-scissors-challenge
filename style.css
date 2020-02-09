@@ -4,54 +4,31 @@ body
   font-family: 'Barlow Semi Condensed';
 }
 
-/* The Modal (background) */
+/* Modal */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
-  /* left: 0;
-  top: 0; */
-  width: 50%; /* Full width*/
-  height: 50%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  padding: 10px;
+  border: none;
+  width: 355px!important;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  /* width: 40%!important;
-  height: 80%; */
-  width: 400px!important;
-  height: 400px;
-  display: inherit!important;
-  text-align: center;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 36px!important;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #1f3756;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.rulesTitle
+.modal-header
 {
-  text-align: left;
-  padding-bottom: 30px;
+  border: none!important;
+}
+
+.modal-title
+{
   font-weight: 700;
   color: #1f3756;
+  font-size: 2rem;
+}
+
+.close
+{
+  font-size: 3rem!important;
 }

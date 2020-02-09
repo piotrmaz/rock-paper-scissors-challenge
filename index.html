@@ -39,20 +39,27 @@
 
   Play Again
 
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+  RULES
+  </button>
 
-
-
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn" class="btn btn-outline-light">RULES</button>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <h2 class="rulesTitle">RULES<span class="close">&times;</span></h2>
-        <img src="images/image-rules.svg" alt="image-rules" />
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">RULES</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/image-rules.svg" alt="image-rules" />
+        </div>
       </div>
     </div>
-    <!-- END MODAL -->
+  </div>
 
 
   <div class="attribution">
