@@ -27,30 +27,24 @@
         <div class="score col-auto">
           <h5 class="scoreText">SCORE</h5>
           <div>
-            <h1 class="number">22</h1>
+            <h1 id="score" class="number">0</h1>
           </div>
         </div>
       </div>
-
-
-
     </div>
   </div>
-  <!-- <section id="game-section"> -->
 
-  <div class="container">
+
+  <div id="startGame" class="container">
 
     <div class="row justify-content-center">
-        <img class="triangle" src="images/bg-triangle.svg" alt="bg-triangle" />
-        <button class="rock-img round button-hover"></button>
-        <button class="scissors-img round button-hover"></button>
-  </div>
-  <button class="paper-img round button-hover"></button>
+      <img class="triangle" src="images/bg-triangle.svg" alt="bg-triangle" />
+      <button id="rock" class="rock-img round button-hover game"></button>
+      <button id="scissors" class="scissors-img round button-hover game"></button>
+    </div>
+    <button id="paper" class="paper-img round button-hover game"></button>
 
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-outline-light btn-sm buttonModal" data-toggle="modal" data-target="#exampleModal">
-    <span class="buttonLabel">RULES</span>
-  </button>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -69,6 +63,10 @@
     </div>
   </div>
 
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-outline-light btn-sm buttonModal" data-toggle="modal" data-target="#exampleModal">
+    <span class="buttonLabel">RULES</span>
+  </button>
   <!-- <div class="footer">
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
