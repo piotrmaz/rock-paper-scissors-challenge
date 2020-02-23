@@ -1,22 +1,15 @@
 var rock = $("#rock");
 var scissors = $("#scissors");
 var paper = $("#paper");
-var gameButton = ["rock", "scissors", "paper"];
+var gameButton = [rock, scissors, paper];
 var pcChoseButton = "";
 var userClickButton = "";
+var pcButton = "";
 
 var score = 0;
 
 
-
-function choisePC() {
-  pcChoseButton = gameButton[Math.floor(Math.random() * Math.floor(gameButton.length))];
-return pcChoseButton;
-
-}
-
-
-// user choosen button
+// user choose button
 
 
 $(".game").click(function(event) {
@@ -28,24 +21,55 @@ $(".game").click(function(event) {
   choisePC();
   console.log(choisePC());
 
-checkAnswer();
+  checkAnswer();
+
+  // 2nd scene
+
+  $("#startGame").addClass("invisible");
+
+  var secondStepUser = $(this).attr("class");
+
+  $(".secondScene").removeClass("invisible");
+  $("#buttonSecondScene").addClass(secondStepUser).removeClass("button-hover"); //add user choosen button to 2nd scene
+
+  $("#buttonSecondScenePc").addClass(pcChoseButton).addClass("round").removeClass("button-hover"); //add PC choosen button to 2nd scene
+
+  $(".restartGame").click(function() {
+    resetGame();
+
+  });
 
 })
 
+function resetGame() {
 
-function checkAnswer(){
-  if(userClickButton == pcChoseButton)
-  {
+  $("#buttonSecondScene").removeClass();
+  $("#buttonSecondScenePc").removeClass();
+  $(".secondScene").addClass("invisible");
+  $("#startGame").removeClass("invisible");
+
+}
+
+
+function choisePC() {
+  pcChoseButton = gameButton[Math.floor(Math.random() * Math.floor(gameButton.length))];
+  pcChoseButton = pcChoseButton.attr("id");
+  return pcChoseButton;
+}
+
+
+
+function checkAnswer() {
+  if (userClickButton == pcChoseButton) {
     console.log("REMIS");
-  }
-  else if ((userClickButton=="paper" && pcChoseButton=="rock") || (userClickButton=="rock" && pcChoseButton=="scissors") || (userClickButton=="scissors" && pcChoseButton=="paper")) {
-        console.log("Player win");
-        score++;
-        $("#score").html(score);
-  }
-
-  else
-  {
+    $("#center-score-text").html("DRAW").css("color", "#4d88ff");
+  } else if ((userClickButton == "paper" && pcChoseButton == "rock") || (userClickButton == "rock" && pcChoseButton == "scissors") || (userClickButton == "scissors" && pcChoseButton == "paper")) {
+    console.log("Player win");
+    score++;
+    $("#score").html(score);
+    $("#center-score-text").html("YOU WIN").css("color", "green");
+  } else {
     console.log("YOU LOST");
+    $("#center-score-text").html("YOU LOST").css("color", "red");
   }
 }

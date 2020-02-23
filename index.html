@@ -39,11 +39,36 @@
 
     <div class="row justify-content-center">
       <img class="triangle" src="images/bg-triangle.svg" alt="bg-triangle" />
-      <button id="rock" class="rock-img round button-hover game"></button>
-      <button id="scissors" class="scissors-img round button-hover game"></button>
+      <button id="rock" class="rock round button-hover game"></button>
+      <button id="scissors" class="scissors round button-hover game"></button>
     </div>
-    <button id="paper" class="paper-img round button-hover game"></button>
+    <button id="paper" class="paper round button-hover game"></button>
 
+  </div>
+
+  <!-- second scene -->
+
+  <div class="secondScene invisible">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <h4 class="subtitles-space">YOU PICKED</h4>
+          <!--user -->
+          <img id="buttonSecondScene" class="" />
+        </div>
+        <div class="col-lg-3 middle-score-space">
+          <!--scoreText -->
+          <h2 id="center-score-text">YOU WIN</h2>
+          <button type="button" class="btn btn-light btn-lg restartGame">PLAY AGAIN</button>
+
+        </div>
+        <div class="col-lg-4">
+          <h4 class="subtitles-space">THE HOUSE PICKED</h4>
+          <!--pcPlayer-->
+          <img id="buttonSecondScenePc" class="" />
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Modal -->
