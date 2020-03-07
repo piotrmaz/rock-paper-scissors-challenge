@@ -32,7 +32,17 @@ $(".game").click(function(event) {
   $(".secondScene").removeClass("invisible");
   $("#buttonSecondScene").addClass(secondStepUser).removeClass("button-hover"); //add user choosen button to 2nd scene
 
-  $("#buttonSecondScenePc").addClass(pcChoseButton).addClass("round").removeClass("button-hover"); //add PC choosen button to 2nd scene
+  setTimeout(function() {
+    $("#buttonSecondScenePc").addClass(pcChoseButton).addClass("round").removeClass("button-hover"); //add PC choosen button to 2nd scene
+  }, 1200);
+
+  setTimeout(function() {
+    $("#center-score-square").removeClass("invisible");
+  }, 1800);
+
+  setTimeout(function() {
+    $("#buttonSecondScenePc").removeClass("spinner");
+  }, 1200);
 
   $(".restartGame").click(function() {
     resetGame();
@@ -44,9 +54,10 @@ $(".game").click(function(event) {
 function resetGame() {
 
   $("#buttonSecondScene").removeClass();
-  $("#buttonSecondScenePc").removeClass();
+  $("#buttonSecondScenePc").removeClass().addClass("spinner");
   $(".secondScene").addClass("invisible");
   $("#startGame").removeClass("invisible");
+  $("#center-score-square").addClass("invisible");
 
 }
 

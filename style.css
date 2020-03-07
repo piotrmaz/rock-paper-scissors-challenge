@@ -240,3 +240,121 @@ img#buttonSecondScenePc
   letter-spacing: 2px;
   font-weight: 700;
 }
+
+#center-score-square
+{
+  width: auto;
+}
+
+
+/* SPINNER ------------------------------------------------- */
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #fff;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 0.5s infinite ease-in-out;
+  animation: sk-scaleout 0.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 991px){
+
+.top-rectangle
+{
+  transform: scale(0.8);
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+  width: auto!important;
+}
+
+.mobile-game-container
+{
+  transform: scale(0.8);
+}
+
+/* SECOND SCENE MOBILE */
+
+.nr1
+{
+  order: 1;
+}
+
+img#buttonSecondScene
+{
+  width: 8rem;
+  height: 8rem;
+}
+
+
+.nr2
+{
+  order: 3;
+}
+
+.nr3
+{
+  order: 2;
+}
+
+img#buttonSecondScenePc
+{
+  width: 8rem;
+  height: 8rem;
+}
+
+.subtitles-space
+{
+  font-size: 1rem;
+}
+
+#center-score-square
+{
+  padding-top: 50px;
+}
+
+.restartGame
+{
+  padding-left: 40px!important;
+  padding-right: 40px!important;
+}
+
+#center-score-text
+{
+  color: #fff!important;
+  font-size: 2rem;
+}
+
+.buttonModal
+{
+  position: static;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 38%;
+}
+
+
+}
