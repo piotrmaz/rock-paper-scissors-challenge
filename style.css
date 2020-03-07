@@ -142,17 +142,6 @@ z-index: -4;
 
 }
 
-/* .round1
-{
-  content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 330px;
-    height: 330px;
-    z-index: -9;
-    background: radial-gradient(ellipse at center, #2a3858 0%, #2a3858 40%, #263554b9 40.5%, #263554b9 53%, #22325171 53.5%, #22325171 70%,#ffffff00 70.5%, #ffffff00 100%);
-} */
 
 .rock
 {
@@ -294,6 +283,7 @@ img#buttonSecondScenePc
 .mobile-game-container
 {
   transform: scale(0.8);
+  padding: 0!important;
 }
 
 /* SECOND SCENE MOBILE */
@@ -356,5 +346,19 @@ img#buttonSecondScenePc
   margin-left: 38%;
 }
 
+
+}
+
+@media screen and (max-width: 430px){
+  .mobile-game-container
+  {
+    transform: scale(0.7);
+    padding: 0!important;
+  }
+
+  .row
+  {
+    flex-wrap: nowrap!important;
+  }
 
 }

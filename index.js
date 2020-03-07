@@ -77,7 +77,10 @@ function checkAnswer() {
   } else if ((userClickButton == "paper" && pcChoseButton == "rock") || (userClickButton == "rock" && pcChoseButton == "scissors") || (userClickButton == "scissors" && pcChoseButton == "paper")) {
     console.log("Player win");
     score++;
-    $("#score").html(score);
+    setTimeout(function() {
+        $("#score").html(score);
+    }, 2200);
+
     $("#center-score-text").html("YOU WIN").css("color", "green");
   } else {
     console.log("YOU LOST");
