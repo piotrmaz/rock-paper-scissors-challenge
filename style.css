@@ -356,7 +356,7 @@ img#buttonSecondScenePc
     padding: 0!important;
   }
 
-  .row
+  .row-first-scene
   {
     flex-wrap: nowrap!important;
   }
